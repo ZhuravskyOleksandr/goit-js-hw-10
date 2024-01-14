@@ -1,0 +1,54 @@
+.delay-label {
+    color: #2E2F42;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+}
+
+.delay-label input{
+    display: block;
+    width: 360px;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid #808080;
+    color: #2E2F42;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+}
+
+fieldset {
+    width: 360px;
+    height: 64px;
+    border-radius: 4px;
+    border: 1px solid #808080;
+    margin-bottom: 16px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 48px;
+}
+
+fieldset:focus-within {
+    border-color: #000;
+}
+
+form button {
+    width: 360px;
+    height: 40px;
+    padding: 8px 16px;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    border: none;
+    border-radius: 8px;
+    background: #4E75FF;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #6C8CFF;
+}

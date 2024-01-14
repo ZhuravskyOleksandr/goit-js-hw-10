@@ -1,0 +1,60 @@
+.time-input {
+    width: 272px;
+    height: 40px;
+    padding: 16px 8px;
+    color: #2E2F42;
+    font-size: inherit;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+}
+
+.start-btn {
+    padding: 8px 16px;
+    color: #FFF;
+    font-size: 16px; 
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    border-radius: 8px;
+    background-color: #4E75FF;
+    border: none;
+    cursor: pointer;
+} 
+
+.start-btn:hover {
+    background-color: #6C8CFF;
+}
+
+.start-btn:disabled {
+    color: #989898;
+    background-color: #CFCFCF;
+    cursor: not-allowed;
+}
+
+.timer {
+    display: flex;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.field:not(:last-child) {
+    margin-right: 24px;
+}
+
+.value {
+    color: #2E2F42;
+    font-size: 40px;  
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+}
+
+.label {
+    color: #2E2F42;
+    line-height: 1.5;
+}
