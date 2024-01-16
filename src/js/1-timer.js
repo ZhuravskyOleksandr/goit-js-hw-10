@@ -6,6 +6,7 @@ import "izitoast/dist/css/iziToast.min.css";
 const input = document.querySelector('.time-input');
 const startBtn = document.querySelector('.start-btn');
 startBtn.addEventListener('click', runTimer);
+startBtn.disabled = true;
 
 const daysSpan = document.querySelector('[data-days]');
 const hoursSpan = document.querySelector('[data-hours]');
@@ -22,7 +23,8 @@ const calendar = flatpickr(input, {
   onClose(selectedDates) {
     userSelectedDate = selectedDates[0].getTime();   
 
-    if (userSelectedDate < Date.now()) {
+      if (userSelectedDate < Date.now()) {
+        startBtn.disabled = true;
         izitoast.error({
             title: 'Error',
             message: 'Illegal operation',

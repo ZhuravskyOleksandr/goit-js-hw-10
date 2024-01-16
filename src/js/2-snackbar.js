@@ -8,17 +8,9 @@ function createPromise(delay, state) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (state === 'fulfilled') {
-                resolve(izitoast.success({
-                    title: 'OK',
-                    message: `✅ Fulfilled promise in ${delay}ms`,
-                    position: 'topRight',
-                }));
+                resolve(`✅ Fulfilled promise in ${delay}ms`);
             } else {
-                reject(izitoast.error({
-                    title: 'Error',
-                    message: `❌ Rejected promise in ${delay}ms`,
-                    position: 'topRight',
-                }));
+                reject(`❌ Rejected promise in ${delay}ms`);
             }
         }, delay);
     });
@@ -32,8 +24,16 @@ function onFormSubmit(event) {
     const radioState = state.value;
 
     createPromise(inputDelay, radioState)
-        .then(data => data)
-        .catch(err => err);
+        .then(data => izitoast.success({
+                    title: 'OK',
+                    message: data,
+                    position: 'topRight',
+                }))
+        .catch(err => izitoast.error({
+                    title: 'Error',
+                    message: err,
+                    position: 'topRight',
+                }));
     
     event.currentTarget.reset();
 };
