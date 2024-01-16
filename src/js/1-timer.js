@@ -3,8 +3,8 @@ import "flatpickr/dist/flatpickr.min.css";
 import izitoast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-const input = document.querySelector('.time-input');
-const startBtn = document.querySelector('.start-btn');
+const input = document.querySelector('#datetime-picker');
+const startBtn = document.querySelector('[data-start]');
 startBtn.addEventListener('click', runTimer);
 startBtn.disabled = true;
 
@@ -26,9 +26,9 @@ const calendar = flatpickr(input, {
       if (userSelectedDate < Date.now()) {
         startBtn.disabled = true;
         izitoast.error({
-            title: 'Error',
-            message: 'Illegal operation',
-            position: 'topRight'
+            title: '',
+            message: 'Please choose a date in the future',
+            position: 'topRight',
         });
     } else {
         startBtn.disabled = false;

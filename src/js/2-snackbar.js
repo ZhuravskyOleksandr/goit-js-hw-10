@@ -1,4 +1,4 @@
-import izitoast from "izitoast";
+import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 const form = document.querySelector('form');
@@ -24,12 +24,12 @@ function onFormSubmit(event) {
     const radioState = state.value;
 
     createPromise(inputDelay, radioState)
-        .then(data => izitoast.success({
+        .then(data => iziToast.success({
                     title: 'OK',
                     message: data,
                     position: 'topRight',
                 }))
-        .catch(err => izitoast.error({
+        .catch(err => iziToast.error({
                     title: 'Error',
                     message: err,
                     position: 'topRight',

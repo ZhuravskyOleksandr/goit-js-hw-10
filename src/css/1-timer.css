@@ -1,4 +1,4 @@
-.time-input {
+input[type="text"] {
     width: 272px;
     height: 40px;
     padding: 16px 8px;
@@ -9,7 +9,7 @@
     margin-bottom: 32px;
 }
 
-.start-btn {
+button[type="button"] {
     padding: 8px 16px;
     color: #FFF;
     font-size: 16px; 
@@ -22,11 +22,11 @@
     cursor: pointer;
 } 
 
-.start-btn:hover {
+button[type="button"]:hover {
     background-color: #6C8CFF;
 }
 
-.start-btn:disabled {
+button[type="button"]:disabled {
     color: #989898;
     background-color: #CFCFCF;
     cursor: not-allowed;
